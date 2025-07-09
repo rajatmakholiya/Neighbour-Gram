@@ -1,0 +1,9 @@
+.codesandbox
+.parcel-cache
+/node_modules
+
+# testing
+/coverage
+
+# production
+/build
