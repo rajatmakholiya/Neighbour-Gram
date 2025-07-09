@@ -1,0 +1,232 @@
+/* Basic Reset and Body Styles */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #f8f9fa;
+    --border-color: #dee2e6;
+    --text-color: #333;
+    --light-text-color: #888;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    background-color: #e9ecef;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* Header */
+header {
+    background-color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.notifications {
+    position: relative;
+    cursor: pointer;
+}
+
+.notification-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* Post Creator */
+.post-creator {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+}
+
+#create-post-form textarea {
+    width: 100%;
+    min-height: 80px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1rem;
+    resize: vertical;
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+.post-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.post-actions button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 0.9rem;
+}
+
+.post-actions button[type="button"] {
+    background-color: #6c757d;
+}
+
+.post-actions i {
+    margin-right: 5px;
+}
+
+.location-info {
+    font-size: 0.85rem;
+    color: var(--light-text-color);
+    margin-top: 10px;
+}
+
+/* Post Feed */
+.post-feed {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+#scroll-observer {
+    text-align: center;
+    padding: 20px;
+    color: var(--light-text-color);
+}
+
+/* Service Worker Status */
+.service-worker-status {
+    background-color: #fffbe6;
+    border: 1px solid #ffeeba;
+    color: #856404;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* Post Article Styles */
+.post {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    /* Remove the parent padding from .post-feed */
+}
+
+.post-feed {
+    padding: 0; /* Remove padding from container to let posts manage it */
+    border: none;
+    background-color: transparent;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.post-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.post-author {
+    font-weight: bold;
+    display: block;
+}
+
+.post-timestamp {
+    font-size: 0.8rem;
+    color: var(--light-text-color);
+}
+
+.post-body p {
+    margin-top: 0;
+    line-height: 1.6;
+}
+
+.post-location {
+    font-size: 0.9rem;
+    color: var(--light-text-color);
+    margin-top: 15px;
+    padding: 8px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.post-footer {
+    display: flex;
+    border-top: 1px solid var(--border-color);
+    margin-top: 15px;
+    padding-top: 10px;
+}
+
+.post-footer button {
+    flex-grow: 1;
+    background: none;
+    border: none;
+    color: #6c757d;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+}
+
+.post-footer button:hover {
+    background-color: #f1f1f1;
+}
+
+.post-footer i {
+    margin-right: 8px;
+}
+
+/* NEW in Step 7: Style for a liked button */
+.like-btn.liked {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.photo-preview-container {
+    margin-top: 15px;
+}
+
+.photo-preview-container img {
+    max-width: 120px;
+    max-height: 120px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.post-body img.post-image {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+}
