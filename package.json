@@ -17,5 +17,11 @@
   ],
   "dependencies": {
     "ws": "^8.18.2"
+  },
+  "targets": {
+  "default": {
+    "context": "browser",
+    "includeNodeModules": false
   }
+}
 }

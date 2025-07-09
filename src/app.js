@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function registerServiceWorker() {
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js')
+            navigator.serviceWorker.register(new URL('./sw.js', import.meta.url))
                 .then((registration) => {
                     console.log('Service Worker registered with scope:', registration.scope);
                 }).catch((error) => {
